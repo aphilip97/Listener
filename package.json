@@ -1,0 +1,24 @@
+{
+  "name": "listener",
+  "version": "0.0.1",
+  "description": "A better GUI for playing audio files in the browser.",
+  "type": "module",
+  "author": "Athul Philip",
+  "license": "ISC",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.2.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aphilip97/Listener.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aphilip97/Listener/issues"
+  },
+  "homepage": "https://github.com/aphilip97/Listener#readme"
+}
