@@ -6,7 +6,14 @@ import App from '../App';
 test('<App /> matches snapshot', () => {
 
   const component = render(
-    <App />
+    <App
+      listen={{
+        title: '',
+        src: '',
+        ext: 'webm',
+        tracklist: [],
+      }}
+    />
   );
 
   expect(component.container).toMatchSnapshot();
