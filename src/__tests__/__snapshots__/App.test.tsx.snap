@@ -7,5 +7,24 @@ exports[`<App /> matches snapshot 1`] = `
   >
     Listener
   </h1>
+  <audio
+    autoplay=""
+    controls=""
+  >
+    <source
+      src=""
+      type="audio/webm"
+    />
+  </audio>
+  <pre
+    class="sc-gsDJrp kiNqDB"
+  >
+    {
+  "title": "",
+  "src": "",
+  "ext": "webm",
+  "tracklist": []
+}
+  </pre>
 </div>
 `;
