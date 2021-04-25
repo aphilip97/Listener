@@ -1,0 +1,52 @@
+{
+
+  "manifest_version": 2,
+  "name": "Listener",
+  "description": "A better GUI for playing audio files in the browser.",
+  "version": "0.0.1",
+
+  "icons": {
+      "16": "icons/icon_16x16.png",
+      "32": "icons/icon_32x32.png",
+      "48": "icons/icon_48x48.png",
+      "128": "icons/icon_128x128.png"
+  },
+
+  "page_action": {
+      "default_icons": {
+          "16": "icons/icon_16x16.png",
+          "32": "icons/icon_32x32.png",
+          "48": "icons/icon_48x48.png"
+      }
+  },
+
+  "content_scripts": [
+      {
+          "matches": [
+              "file://*/*.webm",
+              "file://*/*.m4a",
+              "file://*/*.mp3"
+          ],
+          "js": [ "./index.js" ]
+      },
+      {
+          "matches": [
+              "file://*/*.listen"
+          ],
+          "js": [ "./redirect.js" ]
+      }
+  ],
+
+  "background": {
+      "persistent": true,
+      "scripts": [ "./background.js" ]
+  },
+
+  "permissions": [ "tabs" ],
+
+  "web_accessible_resources": [
+      "./index.js",
+      "./index.js.map"
+  ]
+
+}
