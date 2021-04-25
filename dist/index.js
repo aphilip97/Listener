@@ -1407,8 +1407,19 @@ function v(){return (v=Object.assign||function(e){for(var t=1;t<arguments.length
 const Greeting = qe.h1 `
   color: hsl(0, 0%, 100%);
 `;
-const App = () => {
-    return jsxRuntime.jsx(Greeting, { children: "Listener" }, void 0);
+const Data = qe.pre `
+  color: hsl(0, 0%, 100%);
+`;
+const map = {
+    webm: 'audio/webm',
+    m4a: 'audio/x-m4a',
+};
+const App = ({ listen }) => {
+    return (jsxRuntime.jsxs(jsxRuntime.Fragment, { children: [jsxRuntime.jsx(Greeting, { children: "Listener" }, void 0),
+            jsxRuntime.jsx("audio", Object.assign({ controls: true, autoPlay: true }, { children: jsxRuntime.jsx("source", { src: listen.src, type: map[listen.ext] }, void 0) }), void 0),
+            jsxRuntime.jsx(Data, { children: JSON.stringify(listen, null, 2) }, void 0)] }, void 0));
 };
 
-reactDom.render(jsxRuntime.jsx(react.StrictMode, { children: jsxRuntime.jsx(App, {}, void 0) }, void 0), document.body);
+chrome.runtime.onMessage.addListener((msg) => {
+    reactDom.render(jsxRuntime.jsx(react.StrictMode, { children: jsxRuntime.jsx(App, { listen: msg }, void 0) }, void 0), document.body);
+});
