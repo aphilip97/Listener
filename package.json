@@ -6,7 +6,11 @@
   "author": "Athul Philip",
   "license": "ISC",
   "scripts": {
-    "test": "jest"
+    "build": "./bin/build.sh",
+    "dev": "./bin/dev.sh",
+    "dev:watch": "./bin/dev:watch.sh",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
   },
   "dependencies": {
     "react": "^17.0.2",
