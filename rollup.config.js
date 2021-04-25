@@ -1,41 +1,10 @@
 // @ts-check
-import fs from 'fs';
 import typescript from '@rollup/plugin-typescript';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import replace from '@rollup/plugin-replace';
 
-/**
- * Promisified fs.readFile
- * @param {string} filepath The path to the file to read.
- * @returns {Promise<string[]>} File contents as a string array.
- */
-const asyncReadFile = filepath => new Promise(
-  (resolve, reject) => {
-    fs.readFile(filepath, (err, data) => {
-      if (err) reject(err);
-      resolve(data.toString().split('\n'));
-    });
-  }
-);
-
 const createConfig = async () => {
-
-  const envFile = await asyncReadFile('.env');
-  const env = {};
-
-  for (let index = 0; index < envFile.length; index++) {
-    const variable = envFile[index];
-    let [key, value] = variable.split('=');
-    if (key && value) {
-      value = value.replace(/^"(.*)"$/, '$1');
-      env[key] = value;
-    } else {
-      throw new Error(
-        `Bad key value pair in .env file at line ${index + 1}.`,
-      );
-    }
-  }
 
   /** @type {import('rollup').RollupOptions[]} */
   const config = [
