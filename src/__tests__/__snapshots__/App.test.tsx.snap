@@ -2,29 +2,63 @@
 
 exports[`<App /> matches snapshot 1`] = `
 <div>
-  <h1
-    class="sc-bdvvaa jRTEGb"
+  <main
+    class="sc-bdvvaa gZRjFI"
   >
-    Listener
-  </h1>
-  <audio
-    autoplay=""
-    controls=""
-  >
-    <source
-      src=""
-      type="audio/webm"
-    />
-  </audio>
-  <pre
-    class="sc-gsDJrp kiNqDB"
-  >
-    {
-  "title": "",
-  "src": "",
-  "ext": "webm",
-  "tracklist": []
-}
-  </pre>
+    <section
+      class="sc-gsDJrp gaOqvD"
+    >
+      <h1
+        class="sc-hKwCoD kvRtqJ"
+        data-testid="playlist_title"
+      >
+        Royalty Free Mixtape For Testing.
+      </h1>
+      <button
+        class="sc-eCImvq iWcURH"
+        role="button"
+      >
+        <span
+          class="sc-jRQAMF jcSwbZ"
+        >
+          Summer Tropical Pop
+        </span>
+      </button>
+      <button
+        class="sc-eCImvq iWcURH"
+        role="button"
+      >
+        <span
+          class="sc-jRQAMF jcSwbZ"
+        >
+          Smooth Funk
+        </span>
+      </button>
+      <button
+        class="sc-eCImvq iWcURH"
+        role="button"
+      >
+        <span
+          class="sc-jRQAMF jcSwbZ"
+        >
+          Sunday
+        </span>
+      </button>
+    </section>
+    <section
+      class="sc-dkPtyc bElCjO"
+    >
+      <audio
+        autoplay=""
+        controls=""
+        data-testid="elem_audio"
+      >
+        <source
+          src="file://wsl%24/Ubuntu-20.04/home/sl0wp0k3/dev/Listener/src/__tests__/assets/royalty_free_mixtape.mp3"
+          type="audio/mp3"
+        />
+      </audio>
+    </section>
+  </main>
 </div>
 `;
