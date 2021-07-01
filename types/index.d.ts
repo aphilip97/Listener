@@ -6,6 +6,7 @@ type Track = {
 export type ExtensionsToMimeTypesMap = {
   webm: "audio/webm";
   m4a: "audio/x-m4a";
+  mp3: "audio/mp3";
 }
 
 type Extension = keyof ExtensionsToMimeTypesMap;
